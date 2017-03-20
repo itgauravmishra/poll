@@ -1,0 +1,2194 @@
+
+/* ==========================================================================
+   HTML5 display definitions (utilities.less)
+   ========================================================================== */
+
+/**
+ * Correct `block` display not defined in IE 8/9.
+ */
+*,body{
+	font-family: Sanofi-Regular;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+    display: block;
+}
+ul {
+	padding-left: 0;
+	li {
+		list-style: none;
+	}
+}
+
+/**
+ * Correct `inline-block` display not defined in IE 8/9.
+ */
+
+audio,
+canvas,
+video {
+    display: inline-block;
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+
+[hidden] {
+    display: none;
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+
+html {
+    font-family: sans-serif; /* 1 */
+    -ms-text-size-adjust: 100%; /* 2 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+
+ 
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+
+a:focus {
+    outline: thin dotted;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+
+a:active,
+a:hover {
+    outline: 0;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari 5, and Chrome.
+ */
+
+h1 {
+    font-size: 2em;
+    margin: 16px 0 ; 
+	padding:0;
+}
+
+/**
+ * Address styling not present in IE 8/9, Safari 5, and Chrome.
+ */
+
+abbr[title] {
+    border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+
+b,
+strong {
+    font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari 5 and Chrome.
+ */
+
+dfn {
+    font-style: italic;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+
+hr {
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+
+mark {
+    background: #ff0;
+    color: #000;
+}
+
+/**
+ * Correct font family set oddly in Safari 5 and Chrome.
+ */
+
+code,
+kbd,
+pre,
+samp {
+    font-family: monospace, serif;
+    font-size: 1em;
+}
+
+/**
+ * Improve readability of pre-formatted text in all browsers.
+ */
+
+pre {
+    white-space: pre-wrap;
+}
+
+/**
+ * Set consistent quote types.
+ */
+
+q {
+    quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+
+small {
+    font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+
+/**
+ * Remove border when inside `a` element in IE 8/9.
+ */
+
+img {
+    border: 0;
+}
+
+/**
+ * Correct overflow displayed oddly in IE 9.
+ */
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+
+/**
+ * Address margin not present in IE 8/9 and Safari 5.
+ */
+
+figure {
+    margin: 0;
+}
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+
+fieldset {
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+
+legend {
+    border: 0; /* 1 */
+    padding: 0; /* 2 */
+}
+
+/**
+ * 1. Correct font family not being inherited in all browsers.
+ * 2. Correct font size not being inherited in all browsers.
+ * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+ */
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit; /* 1 */
+    font-size: 100%; /* 2 */
+    margin: 0; /* 3 */
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+
+button,
+input {
+    line-height: normal;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+
+button,
+select {
+    text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+
+button,
+html input[type="button"], /* 1 */
+input[type="reset"],
+input[type="submit"] {
+    -webkit-appearance: button; /* 2 */
+    cursor: pointer; /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+
+button[disabled],
+html input[disabled] {
+    cursor: default;
+}
+
+/**
+ * 1. Address box sizing set to `content-box` in IE 8/9.
+ * 2. Remove excess padding in IE 8/9.
+ */
+
+input[type="checkbox"]{
+    box-sizing: border-box; /* 1 */
+    padding: 0; /* 2 */
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+
+input[type="search"] {
+    -webkit-appearance: textfield; /* 1 */
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box; /* 2 */
+    box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+/**
+ * 1. Remove default vertical scrollbar in IE 8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+
+textarea {
+    overflow: auto; /* 1 */
+    vertical-align: top; /* 2 */
+}
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+
+/**
+ * Remove most spacing between table cells.
+ */
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.no-margin{margin:0!important;}
+.no-padding{ padding:0!important;}
+
+//
+// Utility classes
+// --------------------------------------------------
+ 
+ 
+body{
+     margin:0; 
+	 padding:0;
+}
+
+/*Toggling content
+ -------------------------*/
+
+.hide {
+  display: none !important;
+}
+.show {
+  display: block !important;
+}
+.invisible {
+  visibility: hidden;
+}
+
+ 
+
+
+// For Affix plugin
+// -------------------------
+
+.affix {
+  position: fixed;
+}
+
+.pos-left{
+	left: 0;
+}
+.pos-right{
+	right: 0;
+}
+.pos-top{
+	top: 0;
+}
+.pos-bottom{
+	bottom: 0;
+}
+
+strong,
+b,
+bold    { font-weight: bold; }
+em,
+i,
+italic  { font-style: italic; }
+
+small   { font-size: 85%; }
+cite    { font-style: normal; }
+
+.uppercase(){	text-transform: uppercase;}
+.lowercase(){	text-transform: lowercase;}
+
+.decnone{text-decoration:none;}
+
+// Customized bootstrap css gutter width 30px to 32px
+.row {
+	margin-right: -16px;
+	margin-left: -16px;
+}
+
+
+.wrapper {
+	width: 992px;
+	margin:0 auto;
+}
+
+.top-nav-height {
+	height: @top-navs-height;
+	min-height: @top-navs-height;
+	max-height: @top-navs-height;
+}
+a{
+	&:active, 
+	&:hover, 
+	&:visted {
+		.decnone();
+	}
+}
+
+.input-group {
+	width: 100%;
+}
+
+.padding-l-none {
+	padding-left: 0;
+}
+
+.padding-r-none {
+	padding-right: 0;
+}
+
+.padding-none {
+	padding: 0;
+}
+
+.padding-l-half-gutter {
+	padding-left: 8px;
+}
+
+.padding-r-half-gutter {
+	padding-right: 8px;
+}
+
+button, html [type=button], [type=reset], [type=submit] {
+	border-radius: 2px;
+	border:0;
+	display: block;
+	font-family: 'Sanofi-bold';
+	font-size: 20px;
+	height: 48px;
+	line-height: 28px;
+	text-decoration: none;
+	text-align: center;
+	width: 100%;
+	&:hover {
+		opacity: 0.8;
+	}
+}
+
+.green-button {
+	background: #228B22;
+	color: white;
+}
+
+.blue-button {
+	background: #4885ed;
+	color: white;
+}
+
+.yellow-button {
+	background: #ffa700;
+	color: white;
+}
+
+
+.navbar-default {
+	border:0;
+}
+
+a:focus { 
+    outline: none !important;
+}
+
+/************************************
+*************************************
+	Breadcrumb css starts
+**************************************
+**************************************/
+.common-breadcrumb {
+	text-transform: uppercase;
+	.my-breadcrumb{
+		margin-top:32px;
+		a{
+			color:@color-sanofi-blue;
+			font-family: Sanofi-Regular;
+			font-size: 14px;
+			font-weight: normal;
+			height: 20px;					
+			line-height: 1.43;
+			text-decoration:none;
+		}
+	}
+	.breadcrumb {
+		background:@color-white;
+		margin-bottom:5px;
+		padding:8px 15px 8px 0px;
+		font-weight: 400;
+		> li + li:before {
+			color: @color-sanofi-blue;
+			content: "> ";
+			padding: 0 5px;
+		}
+		.active {
+			color: @color-petrol;
+			font-family: 'Sanofi-Regular';
+			font-weight: 400;
+		}
+	}
+}
+
+/************************************
+*************************************
+	Thumbnail css starts
+**************************************
+**************************************/
+.thumbnail {
+	border:1px solid @color-white;
+	cursor: pointer;		
+	height: 400px !important;
+	padding: 16px 16px 6px 16px;
+	width: 224px !important;
+	&:hover {
+		border: 1px solid @color-gray;
+	}
+	.thumbnail-hover-content{
+		background:@color-dark-petrol;
+		border-radius: 4px;
+		height: 176px;
+		left:8px;
+		opacity:0.8;
+		min-height: 176px;
+		margin-left: -8px;
+		position: absolute;
+		text-align: center;
+		vertical-align: middle;
+		top: 0;
+		width: 100%!important;
+		div{
+			color:white;
+			/*padding: 15px 25px 10px 0px;
+			position:relative;
+			top:60px;*/	
+			p{
+				color:@color-white;
+				font-family: 'Sanofi-Regular';
+				font-size: 12px;
+				margin-top: 3px;
+				text-align: center;
+			}
+			a{	
+				display: inline-block;
+				height:32px;
+				padding:9px 0px 0px 0px;
+				position: relative;
+				width:32px;
+				top: 56px;
+			}
+		}		
+	}
+	
+	.img-contain {
+		min-height: 176px;
+		display: table-cell;
+		vertical-align: middle;
+		height: 176px;
+		max-height: 176px;
+		text-align: center;
+		width: 1%!important;
+		img {
+			margin: 5px auto 12px auto;
+			max-width: 192px;
+			max-height: 176px
+		}
+	}
+	.text-part {
+		.product-desc {
+			height: 132px;
+			.desc-text {
+				height: 60px;
+				padding-top: 10px;
+			}
+			h6 {
+			color:@color-light-petrol;
+			font-weight:400;
+			font-size:12px;
+			margin-top:0;
+			margin-bottom: 5px;
+			word-break: break-all;
+		}
+		p{
+			color:@color-petrol;
+		}
+		}
+		padding:0px;
+		h5 {
+			color: @color-petrol;
+			font-family: 'Sanofi-Semibold';
+			font-size: 16px;
+			height: 30px;
+			word-break: break-all;
+		}		
+		.recommended-product-price{
+			color:@color-sanofi-blue;
+			margin-bottom:13px;
+			margin-top:1px;
+			font-size:20px;
+		}
+		
+		.button-content {
+			margin-top: 16px;
+			margin-bottom: 10px;
+		}
+	}
+}
+
+
+/************************************
+*************************************
+	Feedback css starts
+**************************************
+**************************************/
+
+.alert {
+	color: @color-white;
+	display: inline-block;
+	font-family: 'Sanofi-Semibold';
+	padding:10px 12px;
+	width: 100%;
+	ul {
+		display: inline-block;
+		list-style: none;
+		padding-left:0;
+		width: 100%;
+		li{
+			float: left;
+			&:first-child {
+				width:4%;
+			}
+			&:last-child {
+				width:96%;
+				p {
+					border-bottom: 0;
+				}
+			}
+		}
+	}
+}
+.feedback-positive {
+	background: @color-emerald;
+}
+
+.feedback-information {
+	background: @color-blue;
+}
+
+.feedback-warning {
+	background: @color-yellow;
+}
+
+.feedback-negative {
+	background: @color-red;
+}
+
+/************************************
+*************************************
+	Typo css starts
+**************************************
+**************************************/
+
+
+.anchor {
+	color: @color-sanofi-blue;
+	cursor: pointer;
+	font-family: 'Sanofi-Regular';
+	font-size: 16px;
+	&:hover {
+		 color: @color-dark-blue;
+	}
+	&:visited {
+		 color: @color-light-blue;
+	}
+}
+
+
+
+.anchor-underline {
+	.anchor;
+	text-decoration: underline;
+}
+
+/************************************
+*************************************
+	Bootstrap select starts
+**************************************
+**************************************/
+
+.bootstrap-select.btn-group {
+	border: 0 !important;
+	width: 100% !important;
+	.btn {
+		 -webkit-box-shadow: none;
+		box-shadow: none;
+		color:@color-light-petrol;
+		font-family: 'Sanofi-Regular';
+		font-size: 16px;
+		font-weight: 400;
+		height: 48px;
+		.caret {
+			background: url(../images/form-controlchevron-down.png) 0px 0px no-repeat;
+			border:0;
+		    height: 10px;
+			left: -7px;
+			position: relative;
+			width: 18px;
+		}
+		outline: none;
+		&:focus {
+			border: @color-light-petrol 1px solid;
+			
+		}
+		&:hover {
+			background: @color-white;
+		}
+		
+		.filter-option {
+			color: @color-petrol;
+		}
+	}
+	.dropdown-toggle {
+		background: @color-white;
+		border: @color-gray 1px solid;
+		padding-left: 16px;
+	}
+	.dropdown-menu {
+		font-family: 'Sanofi-Regular';
+		 margin-top: -3px;
+		padding-top: 0;
+		padding-bottom: 0;
+		li {
+			a  {
+				height: 48px;
+				line-height: 46px;
+				padding:3px 16px;
+				&:hover {
+					background: @color-light-gray;
+				}
+			}
+		} 
+		li.selected {
+			background: @color-white;
+			a {
+				cursor: default;
+				background: @color-white;
+				span.text {
+					background: @color-white;
+					font-weight: bold;
+				}
+			}
+		}
+	}
+	.dropdown-menu.inner {
+		max-height: 200px !important;
+		min-height: 48px !important;
+		overflow-y: auto;
+		li {
+			height: 49px;
+			width: 100%;
+		}
+	}
+}
+
+/*********************************************
+**********************************************
+	Form element input type text class starts
+***********************************************
+***********************************************/
+.form-group {
+	input[type="text"],
+	input[type="password"]{
+		background: @color-white;
+		border: @color-gray 1px solid;
+		border-radius: 4px;
+		color: @color-petrol;
+		font-family: 'Sanofi-Regular';
+		font-size: 16px;
+		height: 48px;
+		padding-left: 16px;
+		width: 100%;
+		outline: none;
+		&:focus {
+			border: @color-light-petrol 1px solid;
+			background:@color-white;
+		}
+	}
+	input[type="text"][readonly],
+	input[type="password"][readonly]{
+		background: @color-white;
+		border: @color-gray 1px solid;
+		border-radius: 4px;
+		color: @color-petrol;
+		font-family: 'Sanofi-Regular';
+		font-size: 16px;
+		height: 48px;
+		padding-left: 16px;
+		width: 100%;
+	}
+	label {
+		color: @color-petrol;
+		font-family: 'Sanofi-Semibold';
+		font-size: 12px;
+	}
+	label.readonly {
+		color: @color-dark-gray;
+		font-family: 'Sanofi-Semibold';
+		font-size: 12px;
+	}
+}
+.form-group.error {
+	label {
+		color: @color-red;
+	}
+	input[type="text"] {
+		border: @color-red 1px solid;
+		&:focus {
+			border: @color-red 1px solid;
+		}
+	}
+}
+
+/*******************************************
+********************************************
+	This is for hide show content
+********************************************
+*******************************************/
+
+.hide-content {
+	display: none;
+}
+
+.show-content-block {
+	display: block !important;
+}
+
+.show-content-iblock {
+	display: inline-block;
+}
+
+.border-red {
+	border: 1px solid red !important;
+}
+
+.tooltip-arrow-down {
+	left: 54%;
+	position: absolute;
+    top: 3px;
+}
+.tooltip-arrow-down:after {
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-top: 6px solid @color-white;
+    bottom: -13px;
+    content: "";
+    height: 0px;
+    left: 53%;
+    margin-left: -13px;
+    position: absolute;
+    width: 18px;
+    TOP: 26px;
+}
+.tooltip-arrow-down:before {
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-top: 6px solid @color-gray;
+    bottom: 4px;
+    content: "";
+    height: 0px;
+    left: 53%;
+    margin-left: -13px;
+    position: absolute;
+    width: 18px;
+    top: 28px;
+}
+
+/*****************************************
+*****************************************
+	CSS starts for popup modal
+*****************************************
+*****************************************/
+
+.modal {
+	padding: 0!important;
+	text-align: center;
+	.modal-content{
+		border-radius: 4px;
+		.modal-header {
+			background-color: @color-light-gray;
+			height: 80px;
+			padding:27px 32px 27px 32px;
+			h3 {
+				color: @color-petrol;
+				font-family: 'Sanofi-Semibold';
+				font-size: 20px;
+				text-transform: uppercase;
+			}
+			.close {
+				background: url(../images/x.png) 0px 0px no-repeat;
+				border-top:0;
+				height: 24px;
+				opacity:1;
+				position: relative;
+				width: 24px;
+				&:focus {
+					outline:0;
+					border:0;
+				}
+				&:hover {
+					opacity:0.6;
+					outline:0;
+					border:0;
+				}
+			}
+		}
+		.modal-body {
+			padding: 32px;
+			
+			.button-content {
+				border-top: 1px solid @color-gray;
+				display: inline-block;
+				margin-top: 30px;
+				padding-top: 31px;
+				width: 100%;
+				text-transform: uppercase;
+			}
+		}
+	}
+	&:before {
+	  content: '';
+	  display: inline-block;
+	  height: 100%;
+	  vertical-align: middle;
+	  margin-right: -4px;
+	}
+}
+
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.modal-backdrop.in {
+	opacity: 0.8;
+    background: @color-dark-petrol;
+}
+
+.modal-open .modal {
+  background: @color-dark-petrol;
+}
+/*******************************************
+********************************************
+	Form element checkbox css starts here
+********************************************
+********************************************/
+
+.check-box {
+	position: relative;
+	label {
+		cursor: pointer;
+		position: absolute;
+		top: 10px;
+		font-weight: 400;
+	}
+	.btn {
+		&:focus {
+			outline:0;
+			border:0;
+		}
+	}
+}
+
+
+
+/*****************************************
+******************************************
+		Quick View css Starts Here
+/*****************************************
+******************************************/
+.pdp-quickview{
+	.modal-content {
+		.modal-body {
+			padding: 0 32px;
+		}
+	}
+	.pdp-row{												//PDP Content in a Single Row Crumb//
+		margin-bottom:32px;				
+			.pdp-display-content{						//Product Image Carousel Content//					
+				#carousel-pdp2 {
+					margin-bottom:0px;
+					margin-top:15px;
+					width:100%;
+					.carousel-indicators{
+						bottom: -35px;
+						.dotss{
+							background-color: @color-dark-gray;
+							border-radius: 8px;	
+							height: 8px;
+							width: 8px;
+						}	
+						.active{							
+							background-color:@color-white;
+							border-radius : 8px ;
+							border: solid 2px @color-petrol ;
+							height: 10px;
+							width: 10px;
+						}
+					}						
+					.carousel-inner{
+						width: 100%;
+						.sanofi-product-images{
+							margin: 0 auto;
+							max-width: 480px;
+							max-height: 440px;							
+						}						
+					}	
+					.carousel-control{
+						opacity:1 !important;
+						background:none !important;
+					}					
+				}	
+			}
+			.product-detail{										//Product Details Crumb//			
+				margin-left:30px;
+				margin-top:50px;
+					.medicine-head{
+						margin-top:26px;
+						h4{
+							color: @color-petrol;
+							font-family: Sanofi-Semibold;
+							font-size: 16px;
+							height: 24px;							
+							line-height: 1.5;
+						}
+					}
+					.product-name {
+						h3{
+							color: @color-petrol;
+							font-family: Sanofi-Semibold;
+							font-size: 32px;
+							height: 32px;
+							line-height: 1.25;
+							letter-spacing: -1px;
+							margin-top:15px;
+							margin-bottom:11px;
+							width: 100%;						
+						}			
+					}					
+					.product-ingredients {
+						h4{
+							color: @color-light-petrol;
+							font-family: Sanofi-Regular;
+							font-size: 20px;
+							font-weight: normal;
+							height: 24px;						
+							line-height: 1.2;
+						}
+					}			
+					.product-specifications{			
+						margin-top:24px;
+						margin-left:-10px;						
+							.tax{
+								a{
+									color: @color-sanofi-blue;					
+									font-family: Sanofi-Regular;
+									font-size: 16px;							
+									line-height: 1.5;
+									text-decoration:underline;		
+								}
+							}							
+							.family-box-1, .family-box-2{
+								color:@color-petrol;						
+								font-family: Sanofi-Regular;
+								font-size: 14px;
+								line-height: 1.71;								
+								margin-bottom:14px;
+								width:100%;	
+								label{
+								color:@color-petrol;
+								font-family: Sanofi-Semibold !important;
+								font-size: 14px;
+								margin-bottom:0px;
+								margin-right:5px;
+							}
+						}			
+					}					 			
+					#product-price{													//Product Price//
+						margin-bottom:3px;
+							h3{
+								color: @color-sanofi-blue;
+								font-family: Sanofi-Semibold;
+								font-size: 32px;
+								line-height: 1;
+								margin-top:0px;
+								margin-bottom:3px;
+							}
+						}
+					.pdp-quantity{													//Product Quantity//
+						margin-top:20px;
+							.input-group{							
+								input{
+								border-radius: 4px;
+								height:48px;
+								padding-left:15.1px !important;
+							}
+						}
+					}
+					.sanofi-sapphire-button{
+						height: 48px;
+						line-height: 45px;
+						margin-top:19px;
+					}
+				}	
+			}
+}
+
+
+/*****************************************
+******************************************
+		Pagination CSS starts here
+/*****************************************
+******************************************/
+.custom-pagination{
+	text-align:center;
+	.pagination{
+		li{	
+			a{
+				background:none;
+				border:0;
+				color:@color-petrol;
+				font-family: Sanofi-Semibold;
+				font-size: 16px;
+				height: 16px;				
+				line-height: 1;	
+			}
+		}
+		.activepage {
+			color: @color-sanofi-blue;
+			
+			span {
+				border: 0;
+				background: @color-white;
+				color: @color-sanofi-blue;
+				font-weight: 600;
+			}
+			a {
+				color: @color-sanofi-blue;
+				&:hover {
+					cursor: default;
+				}
+			}
+		}
+	}	
+}
+
+.disable-mobile-menu{
+	pointer-events : none;
+}
+
+.show-hide-login-menu{
+	display:none;
+}
+.flip-menu-image{
+	transform: rotate(180deg) !important; 
+    position: relative;
+}
+
+.border-none{
+	border:0;
+}
+
+.body-accordion{
+	margin-top:40px;
+	margin-bottom:64px;
+	.panel-heading{
+		background:@color-white;
+		height:48px;
+		padding-left:0px;
+		padding-right:0px;
+			a{
+			color: @color-sanofi-blue;
+			display: inline-block;
+			font-family: Sanofi-bold;
+			font-size: 14px;
+			height: 18px;
+			text-decoration: none;
+			width: 100%;
+		}
+	}
+	.panel-body{
+		margin-top:32px;
+		margin-bottom:48px;
+		padding:0px;
+	}
+}
+
+.overflow-x-hidden {
+	overflow-x: hidden;
+}
+
+.margin-none {
+	margin: 0;
+}
+
+.margin-t-none{
+	margin-top:0;
+}
+
+.margin-b-none{
+	margin-bottom:0;
+}
+
+/*******************************************
+********************************************
+	This css for address block
+********************************************
+********************************************/
+.address-block {
+	border-radius: 4px;
+    background-color: @color-white;
+    border: solid 1px @color-gray;
+    width: 100%;
+	.title-content {
+		padding: 20px 15px 20px 15px;
+		border-bottom: 1px solid @color-gray;
+		margin-left: 20px;
+		margin-right: 20px;
+		h4 {
+			border-radius: 4px;
+			display: inline;
+			height: 208px;
+			width: 352px;
+		}
+		span {
+			display: inline;
+			float: right;
+			background: url("../images/star-1_open.png");
+			width: 24px;
+			height: 24px;
+			cursor:pointer;
+			&:hover{					
+				background: url("../images/star-1.png");
+				opacity:0.7;
+				width: 24px;
+				height: 24px;
+				cursor:pointer;
+			}
+		}
+		span.active{
+			display: inline;
+			background: url("../images/star-2.png") !important;
+			width: 24px;
+			height: 24px;
+			cursor:pointer;
+			opacity:1.0;
+			
+		}
+		
+	}	
+	.body-content {
+		h3 {
+			color: @color-petrol;
+			padding: 20px 20px 15px 20px;
+		}
+	}
+	.footer-content {
+		display: inline-block;
+		vertical-align: bottom;
+		width: 100%;
+		background: @color-light-gray;
+		height: 48px;
+		padding: 10px 20px 10px 10px;
+		h3 {
+			color: @color-petrol;
+			display: inline;
+			line-height: 24px;
+			padding: 20px 20px 15px 20px;
+		}
+		h4 {
+			color: @color-petrol;
+			display: inline;
+			float: right;
+			line-height: 4px;
+		}
+	}
+	&:focus {
+		outline: none;
+	}
+}
+/****************************************
+*****************************************
+	DatePicker Css start
+*****************************************
+*****************************************/
+.cal-icon{
+	background: url("../images/ico-calendar.png") 95% 15px  no-repeat !important;
+}
+#ui-datepicker-div{
+	//width:23%;
+	background-color: @color-white;
+	border: solid 1px @color-gray;	
+	padding:0;
+	.ui-datepicker-header{
+		height: 38px;
+		border-radius: 4px;
+		background-color: @color-ghost-white;
+		border: none;
+		border-bottom: solid 1px @color-gray;
+		.ui-datepicker-title{
+			font-family: 'Sanofi-bold';
+			font-size: 16px;
+			text-align: center;
+			color: @color-petrol;
+		}
+		.ui-datepicker-next{
+			top:5px;
+			.ui-icon{
+				background: url("../images/cal-arrow-right.png") no-repeat;
+			}
+		}
+		.ui-datepicker-next-hover{
+			top:5px;
+			right: 2px;
+			border: none;
+			background: none;			
+		}
+		.ui-datepicker-prev{
+			top:5px;
+			margin-left:4px;
+			.ui-icon{
+				background: url("../images/cal-arrow-left.png") no-repeat;
+			}
+		}
+		.ui-datepicker-prev-hover{
+			top:5px;
+			left: 2px;
+			border: none;
+			background: none;			
+		}
+	}
+	table{
+		th{
+			font-family: 'Sanofi-Semibold';
+			font-size: 16px;
+			text-align: center;
+			color: @color-petrol;
+		}
+		.ui-state-default{
+			border: none;
+			background: none;
+			font-family: 'Sanofi-normal';
+			height:30px;
+			width: 30px;
+		}
+		.ui-state-hover{
+			background-color : @color-sanofi-blue;
+			border-radius: 50%;
+			color: @color-white;
+		}
+		td{
+			font-family: 'Sanofi-normal';
+			font-size: 14px;
+			text-align: center;
+			color: @color-petrol;
+			a{
+				padding: 0.4em;
+				text-align: center;
+			}
+		}
+	}	
+}
+/****************************************
+*****************************************
+	DatePicker Css End
+*****************************************
+*****************************************/
+
+
+/****************************************
+*****************************************
+	User Detail Block Css starts Here
+*****************************************
+*****************************************/
+.user-detail-block{	
+	border-radius: 4px;
+	border: solid 1px @color-gray;
+	height: 192px;
+	margin-bottom:20px;
+	width: 100%;
+	h4{
+		margin:0;
+	}
+ 	.active{
+		.block-heading{	
+			background-color: @color-light-gray;
+			border-radius: 4px;				
+			height: 48px;
+			padding:18px 15px 18px 15px;
+			width: 100%;
+			.sub-h4-typo{
+				color:@color-seaweed;
+				margin:0;
+				.green-dot{
+					background:@color-seaweed;
+					border:0;
+					border-radius:8px;
+					height:12px;
+					margin-right:14px;
+					width:12px;
+				}
+			}
+		}
+		.block-body{
+		padding:0px 15px 18px 15px;
+		a{	
+			cursor:pointer;
+			.h4-typo{
+				color: @color-sanofi-blue;	  
+				line-height: 1.5;
+				padding:11px 0px 11px 0px;
+				text-decoration:underline;
+			}
+			.sub-h4-typo{							 
+				
+				 padding:11px 0px 11px 0px;
+				color: @color-sanofi-blue;
+				text-decoration:underline;
+			}
+			
+			
+		}
+		}
+		
+	}
+	
+	 	.blocked{
+		.block-heading{	
+			background-color: @color-light-gray;
+			border-radius: 4px;				
+			height: 48px;
+			padding:18px 15px 18px 15px;
+			width: 100%;
+			.sub-h4-typo{
+				color:@color-red;
+				margin:0;
+				.red-dot{
+					background:@color-red;
+					border:0;
+					border-radius:8px;
+					height:12px;
+					margin-right:14px;
+					width:12px;
+				}
+			}
+		}
+		.block-body{
+		padding:0px 15px 18px 15px;
+		a{		
+			cursor:pointer;
+			.h4-typo{
+				color: @color-sanofi-blue;	  
+				line-height: 1.5;
+				padding:11px 0px 11px 0px;
+				text-decoration:underline;
+			}
+			.sub-h4-typo{							 
+				
+				 padding:11px 0px 11px 0px;
+				color: @color-sanofi-blue;
+				text-decoration:underline;
+			}
+			
+			
+		}
+		}
+		
+	}
+	
+	 	.inactive{
+			pointer-events:none;
+		.block-heading{	
+			background-color: @color-light-gray;
+			border-radius: 4px;				
+			height: 48px;
+			padding:18px 15px 18px 15px;
+			width: 100%;
+			.sub-h4-typo{
+				color:@color-gray;
+				margin:0;
+				.gray-dot{
+					background:@color-gray;
+					border:0;
+					border-radius:8px;
+					height:12px;
+					margin-right:14px;
+					width:12px;
+				}
+			}
+		}
+		.block-body{
+		padding:0px 15px 18px 15px;
+		a{			
+			.h4-typo{
+				color: @color-gray;	  
+				line-height: 1.5;
+				padding:11px 0px 11px 0px;
+				text-decoration:underline;
+			}
+			.sub-h4-typo{							 
+				
+				 padding:11px 0px 11px 0px;
+				color: @color-gray;
+				text-decoration:underline;
+			}
+			
+			
+		}
+		}
+		.role{
+			color:@color-gray;
+		}
+		
+	}
+}
+
+
+
+
+
+/****************************************
+*****************************************
+	User Detail Block Css Ends Here
+*****************************************
+*****************************************/
+
+/****************************************
+*****************************************
+	Sanofi Side Bar Css Start Here
+*****************************************
+*****************************************/
+.sanofi-side-bar{	
+	a{text-decoration:none;}
+		.sub-h3-typo{					
+			font-family:Sanofi-Semibold;
+	}
+	.active{
+		color:@color-sanofi-blue;
+	}
+			
+}
+
+/****************************************
+*****************************************
+	Sanofi Side Bar Css Ends Here
+*****************************************
+*****************************************/
+
+/****************************************
+*****************************************
+	Sanofi Icons css starts here
+*****************************************
+*****************************************/
+.icon-link {
+	background: url(../images/icon-link.png) 0px 0px no-repeat;
+	border-top:0;
+	display: inline-block;
+	height: 48px;
+	width: 48px;
+}
+.icon-link-2x {
+	background: url(../images/icon-link@2x.png) 0px 0px no-repeat;
+	border-top:0;
+	display: inline-block;
+	height: 96px;
+	width: 96px;
+}
+.icon-link-3x {
+	background: url(../images/icon-link@3x.png) 0px 0px no-repeat;
+	border-top:0;
+	display: inline-block;
+	height: 144px;
+	width: 144px;
+}
+.icon-user-manager {
+	background: url(../images/user-manager.png) 0px 0px no-repeat;
+	border-top:0;
+	display: inline-block;
+	height: 16px;
+	width: 12px;
+}
+.icon-ticket {
+	background: url(../images/ticket.png) 0px 0px no-repeat;
+	border-top:0;
+	display: inline-block;
+	height: 18px;
+	width: 18px;
+}
+.icon-three-dots {
+	background: url(../images/three-dots.png) 0px 0px no-repeat;
+	border-top:0;
+	display: inline-block;
+	height: 24px;
+	width: 24px;
+}
+.icon-add-support {
+	background: url(../images/ico-add-support.png) 0px 0px no-repeat;
+	border-top:0;
+	display: inline-block;
+	height: 16px;
+	width: 16px;
+}
+.icon-edit-bp {
+	background: url(../images/ico-edit-bp.png) 0px 0px no-repeat;
+	border-top:0;
+	display: inline-block;
+	height: 26px;
+	width: 25px;
+}
+.round-add {
+	background: url(../images/ico-add.png) 0px 0px no-repeat;
+	border-top:0;
+	display: inline-block;
+	height: 24px;
+	width: 24px;
+}
+
+.download-icon {
+	background: url(../images/ico-download.png) 0px 0px no-repeat;
+	border-top:0;
+	display: inline-block;
+	height: 24px;
+	width: 20px;
+}
+
+.delete-icon-mobile{
+	background: url(../images/x-blue.png) 0px 0px no-repeat;
+	border-top:0;
+	display: inline-block;
+	height: 24px;
+	width: 20px;
+}
+
+.delete-icon{
+	background: url(../images/download.png) 0px 0px no-repeat;
+	border-top:0;
+	display: inline-block;
+	height: 24px;
+	width: 20px;
+}
+
+.sort-icon {
+	background: url(../images/sort_arrow_datatable.png) 0px 0px no-repeat;
+	border-top:0;
+	display: inline-block;
+	height: 14px;
+	width: 10px;
+}
+
+.green-plus-icon {
+	background: url(../images/ico-green-plus.png) 0px 0px no-repeat;
+	border-top:0;
+	display: inline-block;
+	height: 12px;
+	width: 12px;
+	margin-left: 5px;
+}
+
+.red-minus-icon {
+	background: url(../images/ico-red-minus.png) 0px 0px no-repeat;
+	border-top:0;
+	display: inline-block;
+	height: 12px;
+	width: 12px;
+	margin-left: 5px;
+}
+
+.slick-dots {
+	li {
+		button {
+			display: none;
+		}
+	}
+}
+
+
+.default-bottom-margin {
+	margin-bottom: 32px;
+}
+.default-top-margin {
+	margin-top: 32px;
+}
+.default-left-margin {
+	margin-left: 32px;
+}
+.default-right-margin {
+	margin-right: 32px;
+}
+
+.sort-icon{
+	background: url(../images/sort_arrow_datatable.png) 0px 0px no-repeat;
+}
+
+.sorttable_sorted{
+	.sort-icon{
+		background: url(../images/sort_arrow_datatable.png) 0px 0px no-repeat;
+	}
+}
+
+.sorttable_sorted_reverse{
+	.sort-icon{
+		background: url(../images/sort_up_arrows.png) 0px 0px no-repeat;
+	}
+}
+
+#sorttable_sortrevind, #sorttable_sortfwdind {
+	display: none;
+}
+
+.expand-collapse-minus {
+	background: url(../images/ico-contract.png) 0px 0px no-repeat;
+	border-top:0;
+	display: inline-block;
+	height: 12px;
+	width: 12px;
+}
+
+.expand-collapse-plus {
+	background: url(../images/ico-expand.png) 0px 0px no-repeat;
+	border-top:0;
+	display: inline-block;
+	height: 12px;
+	width: 12px;
+}
+
+.error-logo {
+	background: url(../images/new-symbol.png) 0px 0px no-repeat;
+	border-top:0;
+	display: inline-block;
+	height: 32px;
+	width: 31px;
+}
+
+.error-logo-down {
+	background: url(../images/new-symbol@4x.png) 0px 0px no-repeat;
+	border-top:0;
+	display: inline-block;
+	height: 102px;
+	width: 100px;
+}
+.icon-upload-image{
+	background: url("../images/drag-drop.png") 0px 0px no-repeat;
+	display: inline-block;
+	height: 70px;
+	width: 70px;
+}
+
+.ico-download-all{
+	background: url("../images/ico-download-all.png") 0px 0px no-repeat;
+	display: inline-block;
+	height: 27px;
+	width: 27px;
+}
+.icon-company {
+	background: url("../images/icon-company.png") 0px 0px no-repeat;
+	display: inline-block;
+	height: 24px;
+	width: 25px;
+}
+.icon-user {
+	background: url("../images/icon-user.png") 0px 0px no-repeat;
+	display: inline-block;
+	height: 24px;
+	width: 24px;
+}
+
+.icon-cart {
+	background: url("../images/cart.png") 0px 0px no-repeat;
+	cursor: default;
+	display: inline-block;
+	height: 24px;
+	width: 30px;
+}
+.icon-grid.active {
+	background: url("../images/grid-active.png") 0px 0px no-repeat;
+	cursor: default;
+	display: inline-block;
+	height: 16px;
+	width: 16px;
+}
+.icon-grid {
+	background: url("../images/grid.png") 0px 0px no-repeat;
+	cursor: pointer;
+	display: inline-block;
+	height: 16px;
+	width: 16px;
+}
+.icon-list.active {
+	background: url("../images/list-active.png") 0px 0px no-repeat;
+	cursor: default;
+	display: inline-block;
+	height: 16px;
+	width: 16px;
+}
+.icon-list {
+	background: url("../images/list.png") 0px 0px no-repeat;
+	cursor: pointer;
+	display: inline-block;
+	height: 16px;
+	width: 16px;
+}
+.icon-upload-file {
+	background: url("../images/icon-upload.png") 0px 0px no-repeat;
+	cursor: pointer;
+	display: inline-block;
+	height: 48px;
+	width: 48px;
+}
+.icon-blue-cross {
+	background: url("../images/blue-cross.png") 0px 0px no-repeat;
+	cursor: pointer;
+	display: inline-block;
+	height: 23px;
+	width: 23px;
+}
+.icon-blue-twoarrow {
+	background: url("../images/ico-blue-twoarrow.png") 0px 0px no-repeat;
+	cursor: pointer;
+	display: inline-block;
+	height: 18px;
+	width: 25px;
+}
+.icon-upload-new {
+	background: url("../images/ico-upload-new.png") 0px 0px no-repeat;
+	cursor: pointer;
+	display: inline-block;
+	height: 24px;
+	width: 20px;
+}
+.icon-download-new {
+	background: url("../images/ico-download-new.png") 0px 0px no-repeat;
+	cursor: pointer;
+	display: inline-block;
+	height: 24px;
+	width: 20px;
+}
+/****************************************
+*****************************************
+	Sanofi Icons css ends here
+*****************************************
+*****************************************/
+
+/****************************************
+*****************************************
+	This CSS for wishlist block 
+*****************************************
+*****************************************/
+.wishlist-block {
+	border: solid 1px @color-gray;
+	border-radius: 4px;
+	height: 80px;
+	margin-bottom: 32px;
+	padding: 15px;
+	ul {
+		display: inline-block;
+		margin: 0;
+		list-style: none;
+		padding-left:0;
+		width: 100%;
+		li {
+			float: left;
+			height: 50px;
+			line-height: 50px;
+			&:first-child {
+				border-right: solid 1px @color-gray;
+				color: @color-sanofi-blue;
+				font-family: 'Sanofi-Semibold';
+				font-size: 16px;
+				padding-right: 19px;
+				width: 85%;
+			}
+			&:last-child {
+				padding-left: 19px;
+				width: 15%;
+				span {
+					background: url(../images/input-close.png) 0px 0px no-repeat;
+					border-top:0;
+					display: inline-block;
+					height: 16px;
+					width: 16px;
+				}
+			}
+		}
+	}
+}
+
+
+/****************************************
+*****************************************
+	This CSS for wishlist block
+*****************************************
+*****************************************/
+
+
+/****************************************
+*****************************************
+	Custom Toggle button css starts here
+*****************************************
+*****************************************/
+
+/* The toggle-button - the box around the slider */
+.toggle-button {
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 34px;
+	input {
+		display:none;
+	}
+}
+
+/* The toggle-custom */
+.toggle-custom {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #fff;
+	-webkit-transition: .4s;
+	transition: .4s;
+	border-radius: 50px;
+	width: 64px;
+	border: 2px solid #4646ad;
+	height: 32px;
+	
+	&:before {
+		position: absolute;
+		content: "";
+		height: 21px;
+		width: 21px;
+		left: 4px;
+		bottom: 4px;
+		-webkit-transition: .4s;
+		transition: .4s;
+		border-radius: 50px;
+		background: #4646ad;
+		top: 3px;
+	}
+}
+
+input:not(:checked) + .toggle-custom {
+  background-color: #4646ad;
+}
+input:not(:checked) + .toggle-custom:before {
+  background-color: #fff;
+}
+
+input:focus + .toggle-custom {
+  box-shadow: 0 0 1px green;
+}
+
+input:not(:checked) + .toggle-custom:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+  left: 8px;
+}
+
+/* Rounded sliders */
+.toggle-custom.round {
+  border-radius: 34px;
+}
+
+.toggle-custom.round:before {
+  border-radius: 50%;
+}
+
+/* For sliding tabs */
+.tab-bottom-border {
+	box-shadow: inset 0 -2px 0 0 #4646ad;
+	height: 2px;
+	position: absolute;
+}
+
+textarea {
+   resize: none;
+}
+
+.display-inline {
+	display: inline !important;
+}
+
+.display-inlineblock {
+	display: inline-block  !important;
+}
+
+.display-block {
+	display: block  !important;
+}
+
+
+
+.control {
+	font-size: 18px;
+	position: relative;
+	display: block;
+	margin-bottom: 15px;
+	padding-left: 30px;
+	cursor: pointer;
+}
+
+.control input {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+}
+.control__indicator {
+	position: absolute;
+	top: 2px;
+	left: 0;
+	width: 20px;
+	height: 20px;
+	background: #e6e6e6;
+}
+
+.control--radio .control__indicator {
+	border-radius: 50%;
+}
+/* Hover and focus states */
+.control:hover input ~ .control__indicator,
+.control input:focus ~ .control__indicator {
+	background: #ccc;
+}
+
+/* Checked state */
+.control input:checked ~ .control__indicator {
+	background: #2aa1c0;
+}
+
+/* Hover state whilst checked */
+.control:hover input:not([disabled]):checked ~ .control__indicator,
+.control input:checked:focus ~ .control__indicator {
+	background: #0e647d;
+}
+
+/* Disabled state */
+.control input:disabled ~ .control__indicator {
+	pointer-events: none;
+	opacity: .6;
+	background: #e6e6e6;
+}
+
+/* Check mark */
+.control__indicator:after {
+	position: absolute;
+	display: none;
+	content: '';
+}
+
+/* Show check mark */
+.control input:checked ~ .control__indicator:after {
+	display: block;
+}
+
+/* Checkbox tick */
+.control--checkbox .control__indicator:after {
+	top: 4px;
+	left: 8px;
+	width: 3px;
+	height: 8px;
+	transform: rotate(45deg);
+	border: solid #fff;
+	border-width: 0 2px 2px 0;
+}
+
+/* Disabled tick colour */
+.control--checkbox input:disabled ~ .control__indicator:after {
+	border-color: #7b7b7b;
+}
+
+/* Radio button inner circle */
+.control--radio .control__indicator:after {
+	top: 7px;
+	left: 7px;
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background: #fff;
+}
+
+/* Disabled circle colour */
+.control--radio input:disabled ~ .control__indicator:after {
+	background: #7b7b7b;
+}
+
+.hint-text {
+	cursor: pointer;
+	color: @color-sanofi-blue;
+	font-size: 15px;
+	text-decoration: underline;
+	margin-bottom: 8px;
+	display: inline-block
+}

@@ -1,0 +1,66 @@
+createChart("piechartcomponent");
+
+function createChart(charContentId) {
+    if ($("#" + charContentId).length > 0) {
+        Highcharts.chart(charContentId, {
+            chart: {
+                type: 'pie',
+                options3d: {
+                    enabled: true,
+                    alpha: 60,
+                    beta: 0
+                }
+            },
+            title: {
+                text: ''
+            },
+            tooltip: {
+                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    depth: 35,
+                    dataLabels: {
+                        enabled: true,
+                        format: '{point.name}'
+                    }
+                }
+            },
+            series: [{
+                type: 'pie',
+                name: 'Poll share',
+                data: [
+                    ['First option', 45.0],
+                    {
+                        name: 'Second option',
+                        y: 12.8,
+                        sliced: true,
+                        selected: true
+                    },
+                    ['Third option', 8.0],
+                    ['Fourth option', 21.0]
+                ]
+            }]
+        });
+    }
+
+}
+var chartCounts = 7;
+for (var count = 1; count <= chartCounts; count++) {
+    createChart("piechartcomponent" + count);
+}
+if ($(".show-chart").length > 0) {
+    $(".show-chart").on("click", function() {
+        if (!$(this).hasClass("active")) {
+            $(this).addClass("active");
+        }
+        var chartContentObj = $(this).parents(".question-content").find(".chart-content");
+        if ($(chartContentObj).hasClass("hide-content")) {
+            $(chartContentObj).removeClass("hide-content");
+        } else {
+            $(chartContentObj).addClass("hide-content");
+        }
+    });
+}
